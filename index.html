@@ -11,10 +11,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" 
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
-  integrity="sha512-z3gLpd7yknf1YoNbCzqRKc5Uj6zGLZ1t+WQ+6X0xE5Oz5Mq8MS1fYPaL8XnHpRkfjNV8iPBUFeZVt8sELu7kMg==" 
-  crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc5Uj6zGLZ1t+WQ+6X0xE5Oz5Mq8MS1fYPaL8XnHpRkfjNV8iPBUFeZVt8sELu7kMg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -27,18 +26,25 @@
   </button>
 
   <!-- Sidebar Navigation -->
-  <nav id="sidebar" style="position:fixed;top:0;left:-260px;width:250px;height:100vh;background:#fff;box-shadow:2px 0 8px rgba(0,0,0,0.1);z-index:1200;transition:left 0.3s;padding:40px 20px;display:flex;flex-direction:column;gap:20px;">
+  <nav id="sidebar"
+    style="position:fixed;top:0;left:-260px;width:250px;height:100vh;background:#fff;box-shadow:2px 0 8px rgba(0,0,0,0.1);z-index:1200;transition:left 0.3s;padding:40px 20px;display:flex;flex-direction:column;gap:20px;">
     <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:20px;">
       <li><a href="#about">About</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#contact">Contact</a></li>
-      <button id="theme-toggle" aria-label="Toggle dark mode" style="background:none;border:none;cursor:pointer;font-size:1.5em;">
+      <button id="theme-toggle" aria-label="Toggle dark mode"
+        style="background:none;border:none;cursor:pointer;font-size:1.5em;">
         <i id="theme-icon" class="fa-regular fa-moon"></i>
       </button>
     </ul>
   </nav>
+
+  <!-- Profile Image Top-Right -->
+  <div class="profile-pic-floating">
+    <img src="images/profile.jpg" alt="Peter Chege" />
+  </div>
 
   <!-- Hero / Header -->
   <header>
@@ -46,6 +52,7 @@
     <p><em>Python Backend Developer | Professional Bug Creator (and Fixer)</em></p>
     <p>"I turn caffeine and problem-solving into reliable software… usually on the first try."</p>
   </header>
+
 
   <!-- About -->
   <section id="about">
