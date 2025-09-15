@@ -1,7 +1,7 @@
 /* ===== Base Font & Colors ===== */
 :root {
   --primary: #f7c948;
-  --secondary: #1C71D8;
+  --secondary: #4B8BBE;
   --accent: #ffd166;
   --text: #222;
   --bg: #f8f9fd;
@@ -66,12 +66,26 @@ body {
 .hero-bg {
   position: absolute;
   top: 0;
+  left: 0;
+  right: 0;
+  width: 400%;
+  height: 400%;
+  background: var(--wave-yellow);
+  z-index: -1;
+  clip-path: path("M100,0 Q130,60 100,120 Q70,180 100,240 Q130,300 100,360 Q70,420 100,480 Q170,480 200,360 Q230,240 200,120 Q170,0 100,0 Z");
+}
+.hero-bg-left {
+  position: absolute;
+  top: 0;
   right: 0;
   width: 44vw;
   height: 496px;
   background: var(--wave-yellow);
   border-bottom-left-radius: 180px 120px;
-  z-index: 1;
+  border-top-left-radius: 120px 80px;
+  border-bottom-right-radius: 120px 80px;
+  z-index: -1;
+  clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
 }
 .hero-content {
   position: relative;
@@ -90,6 +104,13 @@ body {
   font-weight: 700;
   font-size: 1em;
   letter-spacing: 1px;
+  /* -webkit-text-stroke: 2px #000;
+  text-stroke: 2px #000; */
+  text-shadow:
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    2px 2px 0 #000;
 }
 .hero-name {
   font-weight: 800;
@@ -132,11 +153,9 @@ body {
 }
 .hero-image {
   width: 340px;
-  height: 340px;
-  border-radius: 50%;
+  height: 100%;
   overflow: hidden;
-  box-shadow: 0 8px 32px rgba(0,123,204,0.18);
-  background: #fff;
+  background: transparent;
   z-index: 2;
 }
 .hero-image img {
