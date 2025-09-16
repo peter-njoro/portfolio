@@ -662,6 +662,7 @@ body.dark-theme header p {
     gap: 32px;
   }
   .hero-image {
+    display: none;
     align-self: flex-end;
   }
   .project-list {
