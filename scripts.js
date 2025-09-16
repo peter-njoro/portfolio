@@ -1,3 +1,20 @@
+// Hero image slideshow
+const heroImages = [
+  'images/profile.webp',
+  'images/second-profile.webp'
+];
+let heroIndex = 0;
+const heroImgEl = document.getElementById('hero-slideshow');
+if (heroImgEl) {
+  setInterval(() => {
+    heroImgEl.classList.add('slideshow-fade');
+    setTimeout(() => {
+      heroIndex = (heroIndex + 1) % heroImages.length;
+      heroImgEl.src = heroImages[heroIndex];
+      heroImgEl.classList.remove('slideshow-fade');
+    }, 800);
+  }, 30000);
+}
 // Section ease-in on scroll
 function animateSectionsOnScroll() {
   const sections = document.querySelectorAll('.section-animate');

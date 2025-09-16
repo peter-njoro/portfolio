@@ -153,8 +153,7 @@ body {
   background: #444;
 }
 .hero-image {
-  width: 340px;
-  height: 100%;
+  height: 405px;
   overflow: hidden;
   background: transparent;
   z-index: 2;
@@ -164,7 +163,13 @@ body {
   height: 100%;
   object-fit: cover;
   display: block;
+  transition: opacity 1s cubic-bezier(0.23, 1, 0.32, 1);
+  opacity: 1;
 }
+.slideshow-fade {
+  opacity: 0.2;
+}
+
 
 /* about section */
 #about {
