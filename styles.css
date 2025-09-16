@@ -17,30 +17,38 @@
 }
 
 body {
+    box-sizing: border-box;
   margin: 0;
   padding: 0;
   background: var(--bg);
   color: var(--text);
   font-family: 'Raleway', Arial, sans-serif;
   line-height: 1.0;
+  overflow-x: hidden;
 }
 
-/* ===== Navigation ===== */
 .main-nav {
+  html {
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
   display: flex;
+  *, *::before, *::after {
+    box-sizing: inherit;
+  }
   justify-content: space-between;
   align-items: center;
   padding: 2px 100px 0 48px;
   background: transparent;
   font-size: 1.1em;
-  z-index: 2;
+    max-width: 100%;
 }
 .nav-left {
   font-weight: 700;
   font-size: 1.2em;
 }
 .nav-links {
-  display: flex;
+    width: 100%;
   gap: 32px;
   list-style: none;
   margin: 0;
@@ -317,6 +325,27 @@ body {
   display: flex;
   gap: 24px;
   margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+.contact-icon {
+  font-size: 1.8em;
+  color: var(--btn-secondary);
+  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: none;
+}
+.contact-icon:hover {
+  color: var(--primary);
+  background: #f7c94822;
+}
+.contact-text {
+  font-size: 1em;
+  color: var(--text);
+  font-weight: 500;
 }
 .contact-icon {
   font-size: 1.8em;
@@ -761,5 +790,43 @@ body.dark-theme header p {
   .contact {
     padding: 32px 8px 0 8px;
     max-width: 100vw;
+    background: #fafafa;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    border-radius: 12px;
+    margin-bottom: 32px;
+  }
+  .contact-links {
+    flex-direction: column;
+    gap: 12px;
+    align-items: stretch;
+  }
+  .contact-icon {
+    font-size: 1.2em;
+    padding: 12px 8px;
+    justify-content: flex-start;
+    width: 100%;
+    background: #fff;
+    border: 1px solid #eee;
+    margin-bottom: 4px;
+  }
+  .contact-text {
+    font-size: 1em;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 32px 8px 24px 8px;
+    font-size: 0.95em;
+    background: #fafafa;
+    box-shadow: 0 -2px 6px rgba(0,0,0,0.05);
+    border-radius: 12px 12px 0 0;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 0;
+  }
+  .footer-wave {
+    height: 60px;
+    border-top-left-radius: 60px 30px;
+    border-top-right-radius: 60px 30px;
   }
 }
