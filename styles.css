@@ -597,6 +597,41 @@ body.dark-theme header p {
   display: block;
   clip-path: path("M0,0 Q30,50 0,100 Q30,150 0,200 Q30,250 0,300 Q60,320 120,300 Q180,280 200,300 L200,0 Z");
 }
+/* skills styles */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: center;
+  margin: 32px 0;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.1em;
+  color: var(--text);
+}
+
+.skill-item i {
+  font-size: 3rem; /* large icons */
+  color: var(--secondary); /* or var(--primary) */
+  transition: transform 0.2s, color 0.2s;
+}
+
+.skill-item:hover i {
+  transform: scale(1.2);
+  color: var(--primary);
+}
+
+.fun-skill {
+  text-align: center;
+  margin-top: 16px;
+  font-style: italic;
+  color: #555;
+}
 
 /* ===== Responsive ===== */
 @media (max-width: 900px) {
